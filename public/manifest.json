@@ -1,0 +1,22 @@
+{
+  "name": "SHARP PRO MEDIA",
+  "short_name": "Pro Media",
+  "description": "Interactive creative agency microsite for Pro Media Creative Director.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F19",
+  "theme_color": "#0B0F19",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/profile.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

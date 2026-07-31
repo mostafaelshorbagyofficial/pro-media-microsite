@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B0F19;
+  --foreground: #ffffff;
+  --primary: #F43F5E;
+  --primary-glow: rgba(244, 63, 94, 0.15);
+  --secondary: #1E293B;
+  --accent: #E2E8F0;
+  
+  --font-outfit: var(--font-outfit);
+  --font-inter: var(--font-inter);
+}
+
+@theme {
+  --color-bg-dark: #0B0F19;
+  --color-primary: #F43F5E;
+  --color-secondary: #1E293B;
+  --color-accent-rose: #fda4af;
+  
+  --font-outfit: var(--font-outfit), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-spin-reverse: spin-reverse 25s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-inter);
+  cursor: none; /* Hide default cursor for custom cursor experience */
+}
+
+/* Fallback for touch devices to show cursor or handle hover nicely */
+@media (hover: none) {
+  html, body {
+    cursor: auto;
+  }
+}
+
+/* Premium Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0F19;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F43F5E;
+}
+
+/* Reusable Premium Classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-card-interactive {
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-interactive:hover {
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.4);
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.25), 
+              inset 0 0 10px rgba(244, 63, 94, 0.1);
+}
+
+/* Glass Sweep Glow Effect */
+.glass-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-sweep::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.15) 70%,
+    transparent
+  );
+  transform: skewX(-25deg);
+  transition: 0.75s;
+}
+
+.glass-sweep:hover::before {
+  left: 150%;
+  transition: 0.75s ease-out;
+}
+
+/* 3D Perspective Container */
+.perspective-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Glowing text */
+.text-glow-primary {
+  text-shadow: 0 0 10px rgba(244, 63, 94, 0.6), 0 0 20px rgba(244, 63, 94, 0.2);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+/* Camera Grid & Layout guides */
+.camera-grid {
+  background-image: 
+    linear-gradient(rgba(244, 63, 94, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 63, 94, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center;
+}
+
+/* Interactive Magnetic target */
+.magnetic {
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}

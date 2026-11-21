@@ -1,5 +1,12 @@
 # SHARP PRO MEDIA - Premium Interactive Microsite
 
+![Live Preview](./public/preview.jpg)
+
+🌐 **Live Production Deployment:** [pro-media-microsite.vercel.app](https://pro-media-microsite.vercel.app)  
+👨‍💻 **Engineering & Execution:** [Mostafa Mohamed Farhat (Elshorbagy)](https://mostafa-portfolio-iota.vercel.app/) — *Interactive 3D Agency Microsite Engineering (ProMedia)*
+
+---
+
 A state-of-the-art, high-performance interactive digital business card and microsite built for **Pro Media**. It behaves like an Awwwards-winning luxury creative agency landing page rather than a basic links page, designed with cinematic aesthetics, realistic 3D orbits, custom micro-interactions, and a responsive dark theme.
 
 ---
